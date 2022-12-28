@@ -1,0 +1,214 @@
+/******************************************************************************/
+/*************************************HOME*************************************/
+/******************************************************************************/
+
+html {
+   overflow-y: scroll;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background: #fff;
+   background-attachment: fixed;
+   background: -moz-radial-gradient(center, ellipse cover,  #fff 0%, #444 100%);
+   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#fff), color-stop(100%,#444));
+   background: -webkit-radial-gradient(center, ellipse cover,  #fff 0%,#444 100%);
+   background: -o-radial-gradient(center, ellipse cover,  #fff 0%,#444 100%);
+   background: -ms-radial-gradient(center, ellipse cover,  #fff 0%,#444 100%);
+   background: radial-gradient(center, ellipse cover,  #fff 0%,#444 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#444',GradientType=1 );
+   font-family: "Trebuchet MS","Myriad Pro", Helvetica, sans-serif;
+   font-size: 14px;
+   color: #111;
+   overflow-x: hidden;
+}
+
+div#menu {
+   width: 960px;
+   height: 54px;
+   background-color: #555;
+   margin: 0 auto;
+   z-index: 1000;
+}
+
+/*div#menu  h1 {
+   font: bold 30px Tahoma;
+   color: #eee;
+   text-align: center;
+}*/
+
+div#menu ul {
+   width: 600px;
+   list-style-type: none;
+   margin: 0 auto;
+}
+
+div#menu ul li {
+   width: 200px;
+   float: left;
+   text-align: center;
+   padding: 15px 0; 
+}
+
+div#menu ul li a, div#menu ul li a:link, div#menu ul li a:active, div#menu ul li a:visited {
+   font: normal 20px Tahoma;
+   color: #eee;
+   padding: 15px 40px;transition: all 0.2s;
+   -moz-transition: all 0.2s;
+   -webkit-transition: all 0.2s;
+   -o-transition: all 0.2s;
+}
+
+div#menu ul li a:hover, div#menu ul li a:focus {
+   background-color: #09f;
+}
+
+div#menu ul li a.active {
+   /*font-weight: bold;*/
+   background-color: #09f;
+}
+
+div#menu ul li a.active:hover {
+   background-color: #0bf;
+}
+
+a, a:link, a:visited, a:active {
+   color: #000;
+   text-decoration: none;
+}
+
+a:focus, a:hover {
+   text-decoration: none;
+}
+
+
+/******************************************************************************/
+/*************************************GALLREY**********************************/
+/******************************************************************************/
+
+
+#thumbContainter {
+   position: absolute;
+   top: 64px;
+   /*left: 0px;*/
+   bottom: 0px;
+   margin: 0;
+   /*background: transparent;
+   border-right: 1px solid #f0f0f0;
+   -moz-box-shadow: -2px 0px 10px #000 inset;
+   -webkit-box-shadow: -2px 0px 10px #000 inset;
+   box-shadow: -2px 0px 10px #000 inset;*/
+} 
+
+#thumbScroller {
+   position: relative;
+   height: 300px;
+   overflow-x: hidden;
+   overflow-y: scroll;
+   left: -180px;
+}
+
+#thumbScroller .container {
+   position: relative;
+   top: 0;
+   float: left;
+   margin-right: 10px;
+}
+
+#thumbScroller .content {
+   clear: both;
+   float: left;
+}
+
+#thumbScroller .content div {
+   height: 140px;
+   float: left;
+}
+
+#thumbScroller .content a {
+   outline: none;
+}
+
+#thumbScroller img {
+   border: 5px solid #000;
+   /*-moz-box-shadow: 0px 0px 2px #000;
+   -webkit-box-shadow: 0px 0px 2px #000;
+   box-shadow: 0px 0px 2px #000;*/
+   width: 180px;
+   max-height: 120px;
+}
+
+img.pg_thumb, img#pg_large, .pg_title h1, .pg_content .pg_description div {
+   position: relative;
+}
+
+.pg_content {
+   width: 960px;
+   margin: 0 auto 10px auto; 
+   clear: both;
+   background-color: #eee;
+   -moz-box-shadow: 0px 0px 40px rgba(0,0,0,0.5);
+   -webkit-box-shadow: 0px 0px 40px rgba(0,0,0,0.5);
+   box-shadow: 0px 0px 40px rgba(0,0,0,0.5);
+}
+
+.pg_content .pg_description div {
+   display: none;
+}
+
+.pg_title h1 {
+   display: none;
+   left: 230px;
+   color: #444;
+   font: normal 25px Tahoma;
+   padding: 10px 0;
+}
+
+img.pg_thumb {
+   display: none;
+}
+
+img#pg_large {
+   z-index: 9999;
+}
+
+img.pg_thumb, img#pg_large {
+   top: 0;
+   left: 230px;
+   width: 720px;
+}
+
+
+.pg_description p {
+   font: normal 15px Tahoma;
+   color: #444;
+   text-align: justify;
+   width: 720px;
+   padding: 10px 0;
+}
+
+#pg_desc1 div {
+   top: 0px;
+   left: 230px;
+}
+
+#jcontent {
+
+}
+
+::-webkit-scrollbar {
+   width: 10px;
+}
+
+::-webkit-scrollbar-track { 
+   background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb 
+{
+   background-color: #444;
+}
