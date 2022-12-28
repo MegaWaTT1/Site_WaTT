@@ -1,0 +1,198 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Уголок Ватта</title>
+		<link rel="stylesheet" type="text/css" href="./css/reset.css">
+		<link rel="stylesheet" type="text/css" href="./css/default.css">
+		<link rel="shortcut icon" type="image/x-icon" href="./images/icons/favicon.ico">
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+	</head>
+<body>
+	</body>
+	<div id="page">
+	<div id="menu">
+		<ul>
+			<li><a class="active" href="index.html">О Ватте</a></li>
+			<li><a href="gallery.html">Галерея</a></li>
+			<li><a href="projects.html">Проекты<br/></a>В разработке</li>
+		</ul>
+	</div>
+	<div id="main-page">
+		<div class="greetings">
+			<span class="left">
+				<h2>Что-уж, что я думаю, что здесь нужно написать самое главное, интимное, то, что вам нужно! "Привет"</h2>
+				
+Что уж я раз видеть вас, я создал этот "сайт" чтобы... Вы знали что он у меня есть
+Теперь я могу только пожелать вам хорошего дня / ночи!
+
+			</span>
+			<span class="right">
+				Кратко об о мне:
+				<ul>
+				<li><a href="#who">Кто я такой?</a>
+				<li><a href="#in">Интересы</a>
+				<li><a href="#masterpieces">Предложение</a>
+				<li><a href="#links">Ссылки</a>
+				</ul>
+			</span>
+			<span class="cear"></span>
+		</div>
+		
+		<div class="cheat-0"></div>
+		
+
+		<!-- Таймер до ДР -->
+		<div class="timer timer-1">
+			<div class="timer__items">
+			</br>До моего ДР осталось:</br>
+			  <div class="timer__item timer__days">00</div>
+			  <div class="timer__item timer__hours">00</div>
+			  <div class="timer__item timer__minutes">00</div>
+			  <div class="timer__item timer__seconds">00</div>
+			</div>
+			<div class="timer__result"></div>
+		  </div>
+		  
+
+		<div id="content">
+			<div id="who" class="node">
+				<p>
+					<b>Кто я такой?</b></br>
+					</br>
+					Звать меня Олег, но известен так-же как: Ватт, МегаВатт, MegaWaTT и т.д</br>
+					</br>
+					ДР у меня 10.05</br>
+					</br>
+					Да, знаю что тут мало текста для отдельного "блога" но рано или поздно я сюда что-то добавлю</br>
+				</p>
+			</div>
+			<div id="awards" class="node">
+				<p>
+					<b>Интересы(хобби?)</b></br>
+					</br>
+					Что-уж я довольно разностороний человек я могу... Я могу... Ничего</br>
+					</br>
+					Спидраню P2</br>
+					</br>
+					Что-то могу сделать в хаммере</br>
+					</br>
+					Я могу сделать как-то тупой OST
+					</br>
+				</p>
+			</div>
+			<div id="in" class="node">
+				<p>
+					<b>Предложение</b></br>
+					</br>
+					Вы мне можете свободно написать в дискорде и если мне понравиися то я могу сделать OST что-то наделать в хаммере и что-то по мелачам</br>
+					</br>
+					Дискорд для предложений - MegaWaTT#3237.</br>
+				</p>
+			<div class="cheat-1"></div>
+		</div>
+		
+		<div id="links">
+			<div class="align">
+				<a href="https://steamcommunity.com/id/mzjoqe"><img src="./images/icons/steam.png"></a>
+				<a href="https://www.speedrun.com/user/MegaWaTT"><img src="./images/icons/speedrun.png"></a>
+				<a href="https://www.youtube.com/channel/UC8RFPlYN16qQ1sOIMxw7Iww"><img src="./images/icons/youtube.png"></a>
+			</div>
+		</div>
+	</div>
+</body>
+	  
+	<script type="text/javascript">
+		$(document).ready(function() {
+		  function filterPath(string) {
+		  return string
+			.replace(/^\//,'')
+			.replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+			.replace(/\/$/,'');
+		  }
+		  var locationPath = filterPath(location.pathname);
+		  var scrollElem = scrollableElement('html', 'body');
+
+		  $('a[href*=#]').each(function() {
+			var thisPath = filterPath(this.pathname) || locationPath;
+			if (  locationPath == thisPath
+			&& (location.hostname == this.hostname || !this.hostname)
+			&& this.hash.replace(/#/,'') ) {
+			  var $target = $(this.hash), target = this.hash;
+			  if (target) {
+				var targetOffset = $target.offset().top;
+				$(this).click(function(event) {
+				  event.preventDefault();
+				  $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
+					location.hash = target;
+				  });
+				});
+			  }
+			}
+		  });
+
+		  // Чтобы при тыке на теги оно "скролила"
+		  function scrollableElement(els) {
+			for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+			  var el = arguments[i],
+				  $scrollElement = $(el);
+			  if ($scrollElement.scrollTop()> 0) {
+				return el;
+			  } else {
+				$scrollElement.scrollTop(1);
+				var isScrollable = $scrollElement.scrollTop()> 0;
+				$scrollElement.scrollTop(0);
+				if (isScrollable) {
+				  return el;
+				}
+			  }
+			}
+			return [];
+		  }
+
+		});
+		document.addEventListener('DOMContentLoaded', function() {
+
+   
+// конечная дата
+const deadline = new Date(2023, 05, 10);
+// id таймера
+let timerId = null;
+// склонение числительных
+function declensionNum(num, words) {
+	return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+  }
+  // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
+  function countdownTimer() {
+    const diff = deadline - new Date();
+    if (diff <= 0) {
+      clearInterval(timerId);
+    }
+    const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
+    const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
+    const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
+    const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+    $days.textContent = days < 10 ? '0' + days : days;
+    $hours.textContent = hours < 10 ? '0' + hours : hours;
+    $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+    $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+    $days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
+    $hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
+    $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
+    $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
+  }
+  // получаем элементы, содержащие компоненты даты
+  const $days = document.querySelector('.timer__days');
+  const $hours = document.querySelector('.timer__hours');
+  const $minutes = document.querySelector('.timer__minutes');
+  const $seconds = document.querySelector('.timer__seconds');
+  // вызываем функцию countdownTimer
+  countdownTimer();
+  // вызываем функцию countdownTimer каждую секунду
+  timerId = setInterval(countdownTimer, 1000);
+});
+
+	</script>
+
+</html>
