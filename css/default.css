@@ -18,6 +18,50 @@ body {
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#444',GradientType=1 );
 }
 
+
+/* Для мобил, не на всех работает */
+@media screen and (max-width: 650px) {
+   #header {
+      height: auto;
+   }
+   #searchform {
+      position: absolute;
+      top: 5px;
+      right: 0;
+   }
+   #main-nav {
+      position: static;
+   }
+   #site-logo {
+      margin: 15px 100px 5px 0;
+      position: static;
+   }
+   #site-description {
+      margin: 0 0 15px;
+      position: static;
+   }
+   #content {
+      width: auto;
+      float: none;
+      margin: 20px 0;
+   }
+   #sidebar {
+      width: 100%;
+      float: none;
+      margin: 0;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   html {
+      -webkit-text-size-adjust: none;
+   }
+   #main-nav a {
+      font-size: 90%;
+      padding: 10px 8px;
+   }
+}
+
 /* Таймер до ДР */
 body{
 	margin: 0;
