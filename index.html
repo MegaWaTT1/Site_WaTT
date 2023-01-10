@@ -3,6 +3,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=600, user-scalable=yes">
 		<title>Уголок Ватта</title>
 		<link rel="stylesheet" type="text/css" href="./css/reset.css">
 		<link rel="stylesheet" type="text/css" href="./css/default.css">
@@ -15,7 +16,7 @@
 	<div id="menu">
 		<ul>
 			<li><a class="active" href="index.html">О Ватте</a></li>
-			<li><a href="gallery.html">Галерея<br\></a>В разработке</li>
+			<li><a href="gallery.html">Галерея</a></li>
 			<li><a href="projects.html">Проекты<br/></a>В разработке</li>
 		</ul>
 	</div>
@@ -41,8 +42,6 @@
 		</div>
 		
 		<div class="cheat-0"></div>
-		
-
 		<!-- Таймер до ДР -->
 		<div class="timer timer-1">
 			<div class="timer__items">
@@ -60,19 +59,19 @@
 			<div id="who" class="node">
 				<p>
 					<b>Кто я такой?</b></br>
-					</br>
+					</br>	
 					Звать меня Олег, но известен так-же как: Ватт, МегаВатт, MegaWaTT и т.д</br>
 					</br>
 					ДР у меня 10.05</br>
 					</br>
-					Да, знаю что тут мало текста для отдельного "блога" но рано или поздно я сюда что-то добавлю</br>
+					Да, знаю что тут мало текста для отдельного "блога", но рано или поздно я сюда что-то добавлю</br>
 				</p>
 			</div>
 			<div id="awards" class="node">
 				<p>
 					<b>Интересы(хобби?)</b></br>
 					</br>
-					Что-уж я довольно разностороний человек я могу... Я могу... Ничего</br>
+					Что-уж я довольно разносторонний человек я могу... Я могу... Ничего</br>
 					</br>
 					Спидраню P2</br>
 					</br>
@@ -131,7 +130,11 @@
 			  }
 			}
 		  });
-
+		// Для мобил
+		var dpt = window.devicePixelRatio;
+	var widthM = window.screen.width;
+	var widthH = window.screen.height;
+	alert(dpt+' '+widthM+' '+widthH+' '+(widthM*dpt)+' '+(widthH*dpt));
 		  // Чтобы при тыке на теги оно "скролила"
 		  function scrollableElement(els) {
 			for (var i = 0, argLength = arguments.length; i <argLength; i++) {
