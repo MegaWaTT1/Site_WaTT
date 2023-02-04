@@ -1,7 +1,7 @@
 /******************************************************************************/
 /*************************************HOME*************************************/
 /******************************************************************************/
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600&display=swap');
 html {
    overflow-y: scroll;
 }
@@ -13,9 +13,10 @@ body {
    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#fff), color-stop(100%,#444));
    background: -webkit-radial-gradient(center, ellipse cover,  #fff 0%,#444 100%);
    background: -o-radial-gradient(center, ellipse cover,  #fff 0%,#444 100%);
-   background: -ms-radial-gradient(center, ellipse cover,  #fff 0%,#444 100%);
-   background: radial-gradient(center, ellipse cover,  #fff 0%,#444 100%);
-   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#444',GradientType=1 );
+	color: #000000;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 1.1em;
+   
    
 }
 .mobile {
@@ -30,17 +31,15 @@ body {
 /* Таймер до ДР */
 body{
 	margin: 0;
-	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto sans",
-"Liberation Sans", sans-serif, "Apple Color Emji", "segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.5;
-	color: #212529;
-	background-color: #fff;
-	-webkit-text-size-adjust: 100%;
-	-webkit-tab-highlight-color: rgba (0, 0, 0, 0);
-	display: flex;
-	justify-content: center; 
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: #212121;
+	color: #f8f8f8;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 1.1em;
+   
+   
 }
 .timer__items {
 	display: flex;
@@ -69,6 +68,7 @@ div#page {
    -moz-box-shadow: 0px 0px 40px rgba(0,0,0,0.5);
    -webkit-box-shadow: 0px 0px 40px rgba(0,0,0,0.5);
    box-shadow: 0px 0px 40px rgba(0,0,0,0.5);
+   
 }
 
 div#menu {
@@ -87,6 +87,7 @@ div#menu ul {
    width: 600px;
    list-style-type: none;
    margin: 0 auto;
+   
 }
 
 div#menu ul li {
@@ -94,6 +95,7 @@ div#menu ul li {
    float: left;
    text-align: center;
    padding: 15px 0; 
+   
 }
 
 div#menu ul li a, div#menu ul li a:link, div#menu ul li a:active, div#menu ul li a:visited {
@@ -107,6 +109,7 @@ div#menu ul li a, div#menu ul li a:link, div#menu ul li a:active, div#menu ul li
 
 div#menu ul li a:hover, div#menu ul li a:focus {
    background-color: #09f;
+   
 }
 
 div#menu ul li a.active {
@@ -128,8 +131,9 @@ a:focus, a:hover {
 }
 
 div#main-page {
-   font: normal 15px Tahoma;
+   font: Barlow Semi Condensed 11px Tahoma;
    clear: both;
+   
 }
 
 div.greetings {
@@ -337,4 +341,28 @@ body.projects div.centered {
    width: 900px;
    height: 148px;
    margin: 0 auto;
+}
+
+table.commands tbody {
+	display: block;
+	max-height: 30em;
+	overflow: scroll;
+}
+
+nav {
+	position: fixed;
+	width: calc(18rem);
+	height: 100vh;
+	font-weight: 600;
+	font-size: 1.2em;
+	overflow: scroll;
+	display: flex;
+}
+
+nav > div {
+	padding: 1em 0 1em 0;
+	flex-shrink: 1;
+	margin: 0 auto 0 auto;
+	display: flex;
+	flex-direction: column;
 }
